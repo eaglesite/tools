@@ -1,0 +1,14 @@
+import{_ as k,m as r,b as u,c as L,d as l,f as s,w as n,p as d,i as W,j as w,t as H,l as _,E as T}from"./index-DlW8UI-H.js";const x={class:"tool-container"},C={class:"tool-section"},y={class:"tool-actions"},V=["innerHTML"],D={class:"tool-label"},E={class:"html-source"},B={class:"mono-font"},F={__name:"MD2HTML",setup(N){const c=_(`# Hello World
+
+This is **bold** and *italic* text.
+
+- List item 1
+- List item 2
+
+[Link](https://example.com)
+
+\`\`\`
+code block
+\`\`\``),o=_("");function m(a){const t=a.trim().toLowerCase();return t.startsWith("javascript:")||t.startsWith("data:")||t.startsWith("vbscript:")?"":a}function v(){let a=c.value;if(!a){o.value="";return}let t=a.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");t=t.replace(/^### (.+)$/gm,"<h3>$1</h3>").replace(/^## (.+)$/gm,"<h2>$1</h2>").replace(/^# (.+)$/gm,"<h1>$1</h1>"),t=t.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*(.+?)\*/g,"<em>$1</em>").replace(/`{3}([\s\S]*?)`{3}/g,"<pre><code>$1</code></pre>").replace(/`(.+?)`/g,"<code>$1</code>").replace(/\[(.+?)\]\((.+?)\)/g,(e,p,i)=>`<a href="${m(i)}" target="_blank">${p}</a>`).replace(/^\- (.+)$/gm,"<li>$1</li>").replace(/(<li>[\s\S]*?<\/li>)\n(?!<li>)/g,"<ul>$1</ul>").replace(/\n{2,}/g,"</p><p>").replace(/^(.+)$/gm,e=>(e.startsWith("<h")||e.startsWith("<ul")||e.startsWith("<li")||e.startsWith("<pre")||e.startsWith("<code")||e.startsWith("<p")||e.startsWith("</")||e.trim()==="",e)),t.startsWith("<")||(t="<p>"+t+"</p>"),t=t.replace(/<p><\/p>/g,""),o.value=t}function f(){c.value="",o.value=""}function h(){o.value&&navigator.clipboard.writeText(o.value).then(()=>T.success("已复制"))}return(a,t)=>{const e=r("el-input"),p=r("el-button"),i=r("el-col"),g=r("CopyDocument"),$=r("el-icon"),M=r("el-row");return u(),L("div",x,[t[6]||(t[6]=l("div",{class:"tool-header-bar"},[l("div",{class:"th-icon",style:{background:"#409EFF15",color:"#409EFF"}},"M→H"),l("h3",null,"Markdown → HTML"),l("span",{class:"th-hint"},"Markdown → HTML")],-1)),s(M,{gutter:16},{default:n(()=>[s(i,{span:24,md:8},{default:n(()=>[l("div",C,[t[1]||(t[1]=l("div",{class:"tool-label"},"Markdown 输入",-1)),s(e,{modelValue:c.value,"onUpdate:modelValue":t[0]||(t[0]=b=>c.value=b),type:"textarea",rows:14,class:"mono-font",placeholder:`# 标题
+**加粗** *斜体*
+- 列表项`,onInput:v},null,8,["modelValue"])]),l("div",y,[s(p,{onClick:f},{default:n(()=>[...t[2]||(t[2]=[d("清空",-1)])]),_:1})])]),_:1}),s(i,{span:24,md:8},{default:n(()=>[t[3]||(t[3]=l("div",{class:"tool-label"},"HTML 预览",-1)),l("div",{class:"html-preview",innerHTML:o.value},null,8,V)]),_:1}),s(i,{span:24,md:8},{default:n(()=>[l("div",D,[t[5]||(t[5]=d("HTML 源代码 ",-1)),o.value?(u(),W(p,{key:0,text:"",size:"small",onClick:h},{default:n(()=>[s($,null,{default:n(()=>[s(g)]),_:1}),t[4]||(t[4]=d(" 复制",-1))]),_:1})):w("",!0)]),l("div",E,[l("pre",B,H(o.value),1)])]),_:1})]),_:1})])}}},S=k(F,[["__scopeId","data-v-499f8c1b"]]);export{S as default};

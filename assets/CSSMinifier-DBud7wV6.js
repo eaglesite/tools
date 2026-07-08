@@ -1,0 +1,14 @@
+import{m as r,b as f,c as m,d as l,f as o,w as s,k as B,M,p as v,t as b,j as x,l as _,E as $,B as F}from"./index-DlW8UI-H.js";const N={class:"tool-container"},D={class:"tool-section"},K={class:"tool-actions"},T={key:0,class:"result-badge info"},j={class:"tool-section"},z={key:0,class:"tool-card",style:{background:"#fef2f2","border-color":"#fecaca","margin-top":"8px",padding:"10px 14px","font-size":"13px",color:"#dc2626"}},A={__name:"CSSMinifier",setup(U){const u=_(`body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: -apple-system, sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}`),n=_(""),c=_(""),g=F(()=>{if(!n.value||!u.value)return"";const e=Math.round((1-n.value.length/u.value.length)*100);return`${u.value.length}B → ${n.value.length}B (${e>0?"-":"+"}${Math.abs(e)}%)`});function y(){c.value="";try{let e=u.value;e=e.replace(/\/\*[\s\S]*?\*\//g,""),e=e.replace(/\s*([{}:;,])\s*/g,"$1"),e=e.replace(/;\}/g,"}"),e=e.replace(/[\r\n]+/g,""),e=e.trim(),n.value=e}catch{c.value="处理失败",n.value=""}}function h(){c.value="";try{let e=u.value.replace(/\/\*[\s\S]*?\*\//g,"").trim();e=e.replace(/\s+/g," ");let t=0,a="";for(const i of e)i==="{"?a+=` {
+`+"  ".repeat(++t):i==="}"?a+=`
+`+"  ".repeat(--t)+"}":i===";"?a+=`;
+`+"  ".repeat(t):i===","?a+=", ":a+=i;n.value=a.replace(/\n\s*\n/g,`
+`).trim()}catch{c.value="格式化失败",n.value=""}}function w(){n.value&&navigator.clipboard.writeText(n.value).then(()=>$.success("已复制"))}return(e,t)=>{const a=r("el-input"),i=r("Compress"),d=r("el-icon"),p=r("el-button"),k=r("Expand"),S=r("CopyDocument"),C=r("el-col"),E=r("el-row");return f(),m("div",N,[t[7]||(t[7]=l("div",{class:"tool-header-bar"},[l("div",{class:"th-icon",style:{background:"#409EFF15",color:"#409EFF"}},"CSS"),l("h3",null,"CSS 压缩 / 格式化"),l("span",{class:"th-hint"},"Ctrl+Enter 处理")],-1)),o(E,{gutter:16},{default:s(()=>[o(C,{span:24,md:12},{default:s(()=>[l("div",D,[t[1]||(t[1]=l("div",{class:"tool-label"},"CSS 输入",-1)),o(a,{modelValue:u.value,"onUpdate:modelValue":t[0]||(t[0]=V=>u.value=V),type:"textarea",rows:10,class:"mono-font",placeholder:"body { margin: 0; padding: 0; }",onKeydown:B(M(y,["ctrl"]),["enter"])},null,8,["modelValue","onKeydown"])]),l("div",K,[o(p,{type:"primary",onClick:y},{default:s(()=>[o(d,null,{default:s(()=>[o(i)]),_:1}),t[2]||(t[2]=v(" 压缩 ",-1)),t[3]||(t[3]=l("span",{class:"shortcut-hint"},"Ctrl+Enter",-1))]),_:1}),o(p,{onClick:h},{default:s(()=>[o(d,null,{default:s(()=>[o(k)]),_:1}),t[4]||(t[4]=v(" 格式化",-1))]),_:1}),o(p,{onClick:w},{default:s(()=>[o(d,null,{default:s(()=>[o(S)]),_:1}),t[5]||(t[5]=v(" 复制",-1))]),_:1}),g.value?(f(),m("span",T,b(g.value),1)):x("",!0)])]),_:1}),o(C,{span:24,md:12},{default:s(()=>[l("div",j,[t[6]||(t[6]=l("div",{class:"tool-label"},"输出",-1)),o(a,{"model-value":n.value,type:"textarea",rows:10,readonly:"",class:"mono-font"},null,8,["model-value"])])]),_:1})]),_:1}),c.value?(f(),m("div",z,b(c.value),1)):x("",!0)])}}};export{A as default};
